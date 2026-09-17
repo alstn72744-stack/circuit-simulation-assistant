@@ -1,0 +1,43 @@
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Credentials (no secrets are required for mock mode)
+.env
+.env.*
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Uploaded circuits, generated simulation results, local audit artifacts
+/simulation_input/
+/simulation_output/
+/local_circuits/
+*.raw
+*.log
+*.fail
+
+# Deliberate exception: legacy, machine-specific smoke script contains a private
+# external circuit path. Preserve locally; publish test_ltspice.py.example.
+# All tests/ Python files and small ASC fixtures remain included.
+/test_ltspice.py
+
+# Unreviewed historical screenshots; publish reviewed images in docs/screenshots/
+/screenshots/
+
+# Editor/OS temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,12 @@
+# Core runtime dependencies, pinned to the locally validated environment.
+# Includes selected transitive pins: spicelib (PyLTSpice),
+# pandas (Streamlit), Pillow (Streamlit/Matplotlib).
+# OpenAI is optional in requirements-llm.txt; browser audit tools are not runtime.
+# A clean installation from this manifest has not yet been verified.
+streamlit==1.63.0
+PyLTSpice==6.0.1
+spicelib==1.6.3
+numpy==2.5.3
+matplotlib==3.11.2
+pandas==3.0.5
+Pillow==12.3.0

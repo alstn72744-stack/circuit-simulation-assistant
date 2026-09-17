@@ -1,0 +1,2 @@
+# Optional for the OpenAI provider; mock mode uses only the standard library.
+openai>=2.0.0,<3

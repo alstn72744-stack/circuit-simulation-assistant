@@ -1,0 +1,19 @@
+# Local configuration template for existing MOSFET integration checks.
+# On a fresh clone only, copy this to test_ltspice.py and supply your circuit.
+# Integration scripts read ASC_FILE via ast; they do not import this script.
+# Do not run this standalone script on your only original: it is the legacy
+# smoke workflow. The application/integration workflow uses protected copies.
+from PyLTSpice import SimRunner, SpiceEditor, LTspice
+
+ASC_FILE = r"local_circuits/Draft3.asc"
+
+runner = SimRunner(
+    output_folder="./simulation_output",
+    simulator=LTspice,
+    verbose=True
+)
+netlist = SpiceEditor(ASC_FILE)
+raw_file, log_file = runner.run_now(netlist)
+print("Simulation finished")
+print("RAW:", raw_file)
+print("LOG:", log_file)
