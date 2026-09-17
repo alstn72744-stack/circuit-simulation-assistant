@@ -451,3 +451,12 @@ Evidence:
 - requirements.txt의 7개 패키지는 core 직접/하위 실행 의존성이다. 설치 metadata에서 spicelib는 PyLTSpice, pandas는 Streamlit, Pillow는 Streamlit/Matplotlib 의존성임을 확인했다. 버전은 유지하고 주석을 정확히 고쳤다. README에 optional requirements-llm.txt 설치 명령과 mock/API 설정 분리를 명시했다. 새 환경 설치는 이번에 수행하지 않았다.
 - README의 121 tests/4종 integration은 기존 검증 기록이며 이번 재실행 주장 없음. AC–Transient/DC–Transient 직접 물리 교차검증과 actual API smoke는 미완료 한계로 유지했다. publication-review에 Git 설치 → init → status/check-ignore → dry-run/staged review → secret scan → commit/빈 remote → push 직전 history scan 순서를 추가했다. 명령은 문서화만 했다.
 - 최종 local links/anchors 26개 통과, Markdown 9개 검사, 기존 Python/tests/fixture 38개 SHA-256 동일, 과거 로그 prefix 보존, 의도치 않은 중요 파일 ignore 0개. 앱 소스/tests 수정 및 전체 regression 재실행 없음. 010A의 로컬 준비/검증/기록을 완료했다. 실제 Git 초기화/add/remote/push 및 LLM/API 호출은 하지 않았다.
+
+---
+
+## Prompt 010B — README Presentation Polish
+
+- README를 Why I Built It → Workflow → Features → Validation → AI-Assisted Development → Development Log → Getting Started → Project Structure → Current Limitations / Future Work 순서로 정리했다. 설치/requirements 설명은 내용 그대로 뒤로 이동했고, 상단 소개를 사용자 schematic·자연어 review/approval·Python deterministic analysis의 3문장으로 다듬었다. 기능 의미를 유지하며 혼합 표현 일부만 정리했다.
+- 보고된 깨진 문장은 현재 로컬 원문과 렌더링에서 발견되지 않았다. 공개 GitHub 페이지 조회는 실패해 원격 현상의 원인을 단정하거나 해결했다고 주장하지 않는다. Markdown 표/inline code/link를 검사하고 EOF의 불필요한 빈 줄을 정리했다. 가짜 이미지/placeholder 링크를 추가하지 않았다.
+- Markdown parser와 headless Edge의 실제 HTML DOM 검사 통과: 요청한 9개 섹션, 검증 표 4행, 기존 코드 블록/inline code 유지, 이미지 0개. 전체 공개 문서 9개의 상대 링크/anchor 26개 통과. Validation 및 Getting Started 본문은 이전과 동일하며 121 tests·실제 integration 수치와 미완료 API/물리 교차검증 한계를 유지했다.
+- 기존 Python/tests/fixture와 requirements 파일 총 40개 SHA-256 동일. 앱/tests/requirements 내용, simulation, LLM/API는 변경·실행하지 않았다. 임시 렌더러/검증 결과는 공개 제외된 simulation_output/publication_audit에만 보관했다. 공개 문서 변경은 README와 두 로그뿐이다.
