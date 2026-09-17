@@ -22,6 +22,38 @@ Natural-language Request
   → AI Interpretation Layer (optional, explicit user action)
 ```
 
+## Screenshots
+
+<p align="center">
+  <a href="docs/screenshots/01_trace_suggestion.png"><img src="docs/screenshots/01_trace_suggestion.png" alt="Trace suggestion for V(out), required-signal warning, and disabled execution approval" width="800"></a><br>
+  <em>Trace suggestion and required-signal checks before approval.</em>
+</p>
+
+<p align="center">
+  <a href="docs/screenshots/02_ac_response.png"><img src="docs/screenshots/02_ac_response.png" alt="AC voltage gain versus frequency with the minus 3 dB level and bandwidth marker" width="800"></a><br>
+  <em>AC gain and -3 dB bandwidth analysis.</em>
+</p>
+
+<details>
+<summary>Parameter Sweep · Transient · DC Sweep 결과 더 보기</summary>
+
+<p align="center">
+  <a href="docs/screenshots/03_parameter_sweep_results.png"><img src="docs/screenshots/03_parameter_sweep_results.png" alt="R1 parameter sweep comparison table with gain, bandwidth, and measurement status" width="800"></a><br>
+  <em>R1 sweep comparisons, including unavailable bandwidth at 5kΩ.</em>
+</p>
+
+<p align="center">
+  <a href="docs/screenshots/04_transient_waveform.png"><img src="docs/screenshots/04_transient_waveform.png" alt="Transient voltage waveforms for V(vout) and V(vin)" width="800"></a><br>
+  <em>Transient voltage waveforms for V(vout) and V(vin).</em>
+</p>
+
+<p align="center">
+  <a href="docs/screenshots/05_dc_sweep.png"><img src="docs/screenshots/05_dc_sweep.png" alt="DC sweep of V(vout) against V2 with the selected sweep point marked" width="800"></a><br>
+  <em>V(vout) across a V2 sweep, with the selected sweep point marked.</em>
+</p>
+
+</details>
+
 ## Features
 
 - **AC:** Target / Reference complex transfer function, low-frequency gain, -3 dB bandwidth, frequency graph.
@@ -61,7 +93,7 @@ Natural-language Request
 
 - [개발 블로그 목차](docs/devlog/README.md) · [실제 사용자 테스트와 UX 개선](docs/devlog/09-real-user-testing.md)
 - [원본 Development Log](docs/development-log.md) · [원본 Prompt Log](docs/prompt-log.md)
-- [스크린샷 계획](docs/screenshots/README.md) · [GitHub Issue 후보](docs/github-issues.md)
+- [스크린샷 안내](docs/screenshots/README.md) · [GitHub Issue 후보](docs/github-issues.md)
 - [공개 전 보안·개인정보 점검](docs/publication-review.md)
 
 ## Getting Started

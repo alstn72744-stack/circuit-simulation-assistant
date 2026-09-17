@@ -460,3 +460,12 @@ Evidence:
 - 보고된 깨진 문장은 현재 로컬 원문과 렌더링에서 발견되지 않았다. 공개 GitHub 페이지 조회는 실패해 원격 현상의 원인을 단정하거나 해결했다고 주장하지 않는다. Markdown 표/inline code/link를 검사하고 EOF의 불필요한 빈 줄을 정리했다. 가짜 이미지/placeholder 링크를 추가하지 않았다.
 - Markdown parser와 headless Edge의 실제 HTML DOM 검사 통과: 요청한 9개 섹션, 검증 표 4행, 기존 코드 블록/inline code 유지, 이미지 0개. 전체 공개 문서 9개의 상대 링크/anchor 26개 통과. Validation 및 Getting Started 본문은 이전과 동일하며 121 tests·실제 integration 수치와 미완료 API/물리 교차검증 한계를 유지했다.
 - 기존 Python/tests/fixture와 requirements 파일 총 40개 SHA-256 동일. 앱/tests/requirements 내용, simulation, LLM/API는 변경·실행하지 않았다. 임시 렌더러/검증 결과는 공개 제외된 simulation_output/publication_audit에만 보관했다. 공개 문서 변경은 README와 두 로그뿐이다.
+
+---
+
+## Prompt 010C — README Screenshot Integration
+
+- 사용자가 제공한 docs/screenshots의 이미지 5장을 직접 확인하고 Workflow 뒤/Features 앞에 Screenshots를 추가했다. Trace suggestion와 AC 2장은 기본 표시, Parameter Sweep·Transient·DC 3장은 details 펼치기로 배치했다. 화면에 보이는 기능만 caption/alt로 설명하며 기존 Validation/설치 본문은 그대로 유지했다.
+- HTML width=800, 중앙 정렬, 높이 자동, 원본 이미지 링크를 통일했다. GitHub와 유사한 responsive image CSS를 적용한 로컬 Edge에서 desktop 1280px의 이미지 폭 800px, mobile 390px의 폭 358px를 확인했다. 5장 모두 로딩·종횡비·컨테이너 내 표시 및 펼치기 동작 통과. 실제 GitHub 배포 화면 검증은 아니다. 상대 링크/이미지 참조 41개 정상.
+- 시각 검토에서 개인 경로·사용자명·이메일·secret은 보이지 않았고 PNG metadata는 색상/gamma/DPI 항목이었다. 이미지 생성·편집 없이 원본 5개를 보존했다. DC curve screenshot은 기존 분압 fixture의 1.775 V 검증과 같은 사례로 주장하지 않는다. docs/screenshots/README.md를 실제 파일명/용도/검토 결과로 갱신했다.
+- 기존 source/tests/fixture/requirements 40개 및 이미지 원본 5개 SHA-256 동일. 소스/tests/requirements 변경, simulation, commit/push는 수행하지 않았다. 공개 문서는 README·스크린샷 안내·두 로그만 수정했다. 제공된 PNG 5개는 untracked 상태를 유지하며 staging하지 않았다.
